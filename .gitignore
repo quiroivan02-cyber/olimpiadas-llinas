@@ -1,0 +1,8 @@
+# Separate project/repository
+/Quien quiere ser millonario/
+
+# Dependencies and generated files
+**/node_modules/
+**/build/
+.DS_Store
+Thumbs.db

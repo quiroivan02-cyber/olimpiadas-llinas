@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1728">
+  <title>Olimpiadas Llinás · Lengua Castellana</title>
+  <link rel="stylesheet" href="css/game.css">
+</head>
+<body data-subject="Lengua Castellana">
+  <main class="shell">
+    <header class="topbar"><img class="school-logo" src="assets/logo.jpg" alt="Escudo del Liceo Taller Llinás"><div><p id="gradeLabel" class="eyebrow">LENGUA CASTELLANA · SELECCIONA EL GRADO</p><h1>Olimpiadas Llinás</h1></div></header>
+    <section id="startScreen" class="panel">
+      <p class="eyebrow">COMPETENCIA DE LENGUA CASTELLANA</p><h2>Selecciona tu categoría</h2>
+      <p class="intro-copy">Escoge el grado para comenzar.</p>
+      <div class="category-list" role="group" aria-label="Selecciona el grado"><button class="category-option" type="button" data-label="Grados 6.º y 7.º" data-bank="data/lengua-6-7.js" aria-pressed="false"><strong>Grados 6.º y 7.º</strong><small>100 preguntas · 10 niveles</small></button>
+<button class="category-option" type="button" data-label="Grados 8.º y 9.º" data-bank="data/lengua-8-9.js" aria-pressed="false"><strong>Grados 8.º y 9.º</strong><small>200 preguntas · 20 niveles</small></button>
+<button class="category-option" type="button" data-label="Grados 10.º y 11.º" data-bank="data/lengua-10-11.js" aria-pressed="false"><strong>Grados 10.º y 11.º</strong><small>200 preguntas · 20 niveles</small></button></div>
+      <p id="categoryStatus" class="status" aria-live="polite"></p>
+      <label class="label" for="playerName">Nombre del participante <span>(opcional)</span></label>
+      <input id="playerName" maxlength="30" autocomplete="name" placeholder="Escribe tu nombre">
+      <button id="btnStart" class="primary" disabled>Iniciar competencia</button>
+    </section>
+    <section id="gameScreen" class="panel" hidden>
+      <div class="stats">
+        <div><span>NIVEL</span><strong id="levelCounter">1 / 10</strong></div>
+        <div><span>PREGUNTA</span><strong id="questionCounter">1 / 100</strong></div>
+        <div><span>PUNTAJE</span><strong id="scoreCounter">0</strong></div>
+        <div><span>TIEMPO TOTAL</span><strong id="timerCounter">00:00</strong></div>
+      </div>
+      <div class="progress" aria-label="Progreso de la competencia"><div id="progressBar"></div></div>
+      <p id="participant" class="player"></p><p id="questionLabel" class="eyebrow"></p>
+      <h2 id="questionText" class="question"></h2><div id="answers" class="answers"></div>
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+      <p class="note">Acierto: 10 × nivel puntos, más bono por rapidez de hasta 10.</p>
+    </section>
+    <section id="resultScreen" class="panel result" hidden>
+      <p id="resultLabel" class="eyebrow"></p><h2 id="resultTitle"></h2>
+      <p id="resultSummary" class="summary"></p><div id="resultGrid" class="result-grid"></div>
+      <button id="continueButton" class="primary"></button>
+    </section>
+  </main>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

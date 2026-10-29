@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <!-- Antena -->
+  <line x1="50" y1="20" x2="50" y2="6" stroke="#555" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="50" cy="6" r="5" fill="#ffcc00"/>
+  
+  <!-- Cabeza -->
+  <rect x="24" y="20" width="52" height="34" rx="8" fill="#455a64" stroke="#263238" stroke-width="3"/>
+  
+  <!-- Orejas/Pernos -->
+  <rect x="17" y="30" width="7" height="14" rx="2" fill="#00bcd4"/>
+  <rect x="76" y="30" width="7" height="14" rx="2" fill="#00bcd4"/>
+  
+  <!-- Visor oscuro -->
+  <rect x="30" y="28" width="40" height="16" rx="4" fill="#1a237e"/>
+  <!-- Ojos brillantes -->
+  <circle cx="40" cy="36" r="4.5" fill="#00e5ff"/>
+  <circle cx="60" cy="36" r="4.5" fill="#00e5ff"/>
+  
+  <!-- Cuello -->
+  <rect x="42" y="54" width="16" height="5" fill="#263238"/>
+  
+  <!-- Cuerpo -->
+  <rect x="20" y="59" width="60" height="28" rx="6" fill="#37474f" stroke="#212121" stroke-width="3"/>
+  
+  <!-- Pantalla del pecho -->
+  <rect x="33" y="64" width="34" height="18" rx="3" fill="#212121"/>
+  <!-- Símbolo matemático (+) -->
+  <line x1="50" y1="67" x2="50" y2="79" stroke="#76ff03" stroke-width="3" stroke-linecap="round"/>
+  <line x1="44" y1="73" x2="56" y2="73" stroke="#76ff03" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Orugas/Ruedas -->
+  <rect x="22" y="87" width="56" height="11" rx="5" fill="#212121"/>
+  <circle cx="32" cy="92.5" r="3" fill="#90a4ae"/>
+  <circle cx="50" cy="92.5" r="3" fill="#90a4ae"/>
+  <circle cx="68" cy="92.5" r="3" fill="#90a4ae"/>
+</svg>

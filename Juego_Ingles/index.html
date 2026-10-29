@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Adventure</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div id="contenedor-principal">
+        
+        <!-- PANTALLA INICIO -->
+        <div id="pantalla-inicio" class="pantalla activa">
+            <h1 class="titulo">🌎 English Adventure 🇬🇧</h1>
+            <p class="descripcion">Let's learn English! ¡Practica tu vocabulario y gramática básica!</p>
+            
+            <div class="formulario-inicio">
+                <label for="nombre-estudiante">Escribe tu nombre (opcional):</label>
+                <input type="text" id="nombre-estudiante" placeholder="Tu nombre..." maxlength="30" autocomplete="off">
+            </div>
+
+            <div class="tarjeta-ayuda">
+                <h3>💡 ¿Cómo jugar?</h3>
+                <p>Lee la frase o palabra. Selecciona la traducción o respuesta correcta. Si fallas, te mostraremos la correcta para que aprendas.</p>
+            </div>
+
+            <button id="btn-comenzar" class="btn-primario" tabindex="0">¡Start Game!</button>
+        </div>
+
+        <!-- PANTALLA JUEGO -->
+        <div id="pantalla-juego" class="pantalla">
+            <div class="cabecera-juego">
+                <div class="info-nivel">Level <span id="texto-nivel">1</span></div>
+                <div class="info-puntaje">Score: <span id="texto-puntaje">0</span> / 10</div>
+            </div>
+            
+            <div class="barra-progreso-contenedor">
+                <div id="barra-progreso" class="barra-progreso-llenado"></div>
+            </div>
+
+            <div class="tarjeta-pregunta">
+                <h2 id="texto-pregunta">Pregunta</h2>
+                <div id="contenedor-opciones" class="cuadricula-opciones">
+                    <!-- Las opciones se inyectan aquí -->
+                </div>
+                <div id="mensaje-retroalimentacion" class="oculto">
+                    <!-- Mensaje de acierto o error -->
+                </div>
+                <button id="btn-siguiente-pregunta" class="btn-secundario oculto" tabindex="0">Next</button>
+            </div>
+        </div>
+
+        <!-- PANTALLA NIVEL COMPLETADO -->
+        <div id="pantalla-nivel" class="pantalla">
+            <h2 id="titulo-nivel-completado">¡Level Complete!</h2>
+            <div class="resumen-nivel">
+                <p>Respuestas correctas: <span id="nivel-correctas" class="destacado">0</span> de 10</p>
+                <p id="mensaje-motivador">Great job!</p>
+            </div>
+            <div class="acciones-nivel">
+                <button id="btn-repetir-nivel" class="btn-secundario" tabindex="0">Repeat Level</button>
+                <button id="btn-siguiente-nivel" class="btn-primario oculto" tabindex="0">Next Level ➡️</button>
+            </div>
+        </div>
+
+        <!-- PANTALLA FINAL -->
+        <div id="pantalla-final" class="pantalla">
+            <div id="zona-impresion">
+                <h1 class="titulo">🏆 You are a Champion! 🏆</h1>
+                <h2 id="final-nombre-estudiante">Estudiante</h2>
+                
+                <div class="resumen-final">
+                    <p>Has completado todos los niveles de inglés con éxito.</p>
+                    <p><strong>Total Score:</strong> <span id="final-puntaje">0</span> / 50</p>
+                    <p><strong>Levels Completed:</strong> <span id="final-niveles">5</span></p>
+                    <p><strong>Date:</strong> <span id="final-fecha"></span></p>
+                </div>
+            </div>
+
+            <div class="acciones-finales no-imprimir">
+                <button id="btn-imprimir" class="btn-secundario" tabindex="0">🖨️ Print Result</button>
+                <button id="btn-jugar-nuevo" class="btn-primario" tabindex="0">🔄 Play Again</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/juego.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor 2D - Arquitectura Limpia</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-family: sans-serif;
+            flex-direction: column;
+        }
+        /* Contenedor relativo para poder sobreponer la UI del juego encima del canvas */
+        #contenedorJuego { position: relative; }
+        canvas {
+            background-color: #000;
+            border: 2px solid #555;
+            box-shadow: 0 0 10px rgba(0,0,0,0.8);
+            display: block;
+        }
+        .ui-panel { margin-top: 10px; font-size: 14px; color: #aaa; }
+        /* UI de la Pregunta Matemática */
+        #panelPregunta {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(10, 20, 40, 0.95);
+            padding: 30px;
+            border: 3px solid #ffaa00;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(255, 170, 0, 0.5);
+            width: 300px;
+        }
+        #panelPregunta h2 { margin-top: 0; color: #ffaa00; }
+        #inputRespuesta { font-size: 24px; width: 120px; text-align: center; padding: 5px; margin: 10px 0; }
+        #btnResponder { font-size: 18px; padding: 8px 20px; background-color: #ffaa00; color: #000; border: none; cursor: pointer; font-weight: bold; }
+        #btnResponder:hover { background-color: #ffd000; }
+        #mensajeError { color: #ff4444; font-weight: bold; font-size: 18px; margin-top: 15px; display: none; }
+    </style>
+</head>
+<body>
+    <div id="contenedorJuego">
+        <canvas id="pantallaJuego" width="800" height="600"></canvas>
+        <!-- Panel UI que aparecerá por encima del juego -->
+        <div id="panelPregunta">
+            <h2 id="textoPregunta">¿Cuánto es?</h2>
+            <input type="number" id="inputRespuesta" autocomplete="off"><br>
+            <button id="btnResponder">Responder (Enter)</button>
+            <p id="mensajeError">¡Respuesta incorrecta!<br>Volviendo al inicio...</p>
+        </div>
+    </div>
+    <div class="ui-panel">FPS: <span id="fpsContador">0</span> | Usa WASD o Flechas para moverte</div>
+    <script src="js/estado.js"></script>
+    <script src="js/bucle.js"></script>
+</body>
+</html>
